@@ -1,0 +1,10 @@
+#cloud-config
+hostname: terra-vm
+
+users:
+  - name: mmr
+    groups: sudo,docker
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBqlmsRTZk5wbiex7qfH5pzx0IX9Qo4FaR9LZmzcxHR6 yandex-cloud@macbook-air
