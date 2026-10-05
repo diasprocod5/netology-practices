@@ -1,0 +1,13 @@
+.gitignore
+.git
+
+venv
+.env
+Dockerfile*
+LICENSE
+proxy.yaml
+*.md
+*.pdf
+*.sh
+nginx/
+haproxy/
