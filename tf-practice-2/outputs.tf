@@ -1,4 +1,4 @@
-output "name" {
+output "vms_params" {
   description = "Параметры виртуальных машин"
   value = {
     vm_web_name        = yandex_compute_instance.platform.name
