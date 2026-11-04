@@ -37,3 +37,19 @@ variable "vms_ssh_public_root_key" {
   type        = string
   description = "ssh-keygen -t ed25519 (public)"
 }
+
+variable "env" {
+  type = string
+  default = "develop"
+  description = "develop environment"
+}
+variable "project" {
+  type = string
+  default = "netology"
+  description = "project Netology"
+}
+variable "role" {
+  type = string
+  default = "platform"
+  description = "resource role"
+}
