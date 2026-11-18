@@ -32,3 +32,64 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+
+# VM WEB vars
+variable "vm_web_count" {
+  description = "Webserver count"
+  type = number
+  default = 2
+}
+variable "vm_web_config" {
+  description = "VM WEB common configuration"
+  default = {
+    name   = "web"
+    platform_id   = "standard-v2"
+    cores         = 2
+    memory        = 2
+    core_fraction = 5
+    disk_size     = 5
+    disk_type     = "network-hdd"
+    preemtible    = true
+    nat           = true
+  }
+}
+
+# VM DBs vars
+variable "vm_db_config" {
+  description = "for_each loop VM variable"
+  default = {
+    main = {
+      platform_id   = "standard-v3"
+      disk_type     = "network-hdd"
+      cores         = 4
+      memory        = 2
+      core_fraction = 20
+      disk_size     = 5
+      preemtible    = true
+      nat           = true
+    }
+    replica = {
+    platform_id   = "standard-v1"
+    disk_type     = "network-hdd"
+    cores         = 2
+    memory        = 1
+    core_fraction = 5
+    disk_size     = 5
+    preemtible    = true
+    nat           = true
+    }
+  }
+}
+
+# SSH connect vars
+
+variable "login" {
+  type = string
+  default = "ubuntu"
+  description = "default SSH user"
+}
+variable "ssh_key_path" {
+  type = string
+  default = "~/.ssh/yandex_cloud_ed25519.pub"
+  description = "public ssh key path"
+}
