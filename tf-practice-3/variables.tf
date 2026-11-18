@@ -48,7 +48,7 @@ variable "vm_web_config" {
     memory        = 2
     core_fraction = 5
     disk_size     = 5
-    disk_type     = "network-hdd"
+    disk_type     = "network-ssd"
     preemtible    = true
     nat           = true
   }
@@ -92,4 +92,32 @@ variable "ssh_key_path" {
   type = string
   default = "~/.ssh/yandex_cloud_ed25519.pub"
   description = "public ssh key path"
+}
+
+# Storage VM vars
+
+variable "storage_vm_config" {
+  description = "Storage VM vars"
+  default = {
+    name   = "storage"
+    platform_id   = "standard-v2"
+    cores         = 2
+    memory        = 2
+    core_fraction = 5
+    disk_size     = 5
+    disk_type     = "network-hdd"
+    preemtible    = true
+    nat           = false
+  }
+}
+
+# Storage VM data-disks vars
+variable "storage_data_disk" {
+  description = "Storage disks config"
+  default = {
+    name = "storage-data-disk"
+    count = 3
+    disk_size = 1
+    disk_type = "network-hdd"
+  }
 }

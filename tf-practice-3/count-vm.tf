@@ -14,6 +14,8 @@ resource "yandex_compute_instance" "web" {
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
+      type = var.vm_web_config.disk_type
+      size = var.vm_web_config.disk_size
     }
   }
   network_interface {
