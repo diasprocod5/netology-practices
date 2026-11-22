@@ -149,3 +149,15 @@ Terraform will perform the following actions:
 Plan: 0 to add, 2 to change, 0 to destroy.
 
 ```
+
+### Задание 4:
+----
+
+Код модуля
+![Sreenshot-4-1](./images/task-4-1.png)
+
+terraform plan
+![Sreenshot-4-2](./images/task-4-2.png)
+
+Подсети в ЛК YC
+![Sreenshot-4-3](./images/task-4-3.png)

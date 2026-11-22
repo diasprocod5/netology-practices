@@ -26,14 +26,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
-| <a name="input_cidr"></a> [cidr](#input\_cidr) | n/a | `list(string)` | n/a | yes |
 | <a name="input_network_name"></a> [network\_name](#input\_network\_name) | n/a | `string` | n/a | yes |
-| <a name="input_zone"></a> [zone](#input\_zone) | n/a | `string` | n/a | yes |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | n/a | <pre>list(object({<br/>    zone = string<br/>    cidr = string<br/>  }))</pre> | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 | ---- | ----------- |
 | <a name="output_network_id"></a> [network\_id](#output\_network\_id) | ID созданной сети |
-| <a name="output_subnet_id"></a> [subnet\_id](#output\_subnet\_id) | ID созданной подсети |
+| <a name="output_subnet_ids"></a> [subnet\_ids](#output\_subnet\_ids) | Map {zone: id} |
 <!-- END_TF_DOCS -->
