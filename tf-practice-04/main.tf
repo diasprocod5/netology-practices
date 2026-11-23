@@ -38,3 +38,10 @@ module "db_user" {
   user_name = var.cluster_config.user_name
   cluster_id = module.cluster_mysql.cluster_id
 }
+
+# s3 Bucket 
+module "s3_bucket" {
+  source      = "github.com/terraform-yc-modules/terraform-yc-s3"
+  bucket_name = "mmr-s3-bucket"
+  max_size    = 1073741824
+}

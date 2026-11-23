@@ -380,3 +380,7 @@ Terraform will perform the following actions:
 
 Plan: 0 to add, 1 to change, 0 to destroy.
 ```
+
+### Задание 6:
+Cоздан s3 бакет
+![s3 bucket created](images/task-6.png)
